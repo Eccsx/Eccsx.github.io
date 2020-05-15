@@ -1,6 +1,6 @@
 # Images
 
-For better visuals, use images 353 x 326 pixels.
+For better visuals, use images square pixel ratio.
 
 [Unsplash](https://unsplash.com/) for great and royalty-free images.
 
