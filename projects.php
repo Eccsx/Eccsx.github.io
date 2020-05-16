@@ -1,6 +1,6 @@
 <html lang="en">
 
-<?php require_once('header.php'); ?>
+<?php require_once('head.php'); ?>
 
 <body class="is-preload">
   <!-- Wrapper -->
