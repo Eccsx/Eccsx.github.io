@@ -267,7 +267,7 @@ i {
 }
 
 p {
-  margin: 0 0 2em 0;
+  margin: 0 0 1em 0;
 }
 
 h1 {
@@ -314,7 +314,7 @@ h5,
 h6 {
   font-weight: 900;
   line-height: 1.5;
-  margin: 0 0 2em 0;
+  margin: 0 0 1.5em 0;
   text-transform: uppercase;
   letter-spacing: 0.35em;
 }
@@ -2961,7 +2961,7 @@ body.is-touch .tiles article .content {
   padding: 8em 0 0.1em 0;
 }
 
-#header .logo {
+.logo {
   display: block;
   border-bottom: 0;
   color: inherit;
@@ -2973,19 +2973,18 @@ body.is-touch .tiles article .content {
   display: inline-block;
 }
 
-#header .logo>* {
+.logo>* {
   display: inline-block;
   vertical-align: middle;
 }
 
-#header .logo .symbol {
-  margin-right: 0.65em;
+.logo {
+  margin-right: 1.5em;
 }
 
-#header .logo .symbol img {
+.logo img {
   display: block;
-  width: 2em;
-  height: 2em;
+  height: 3em;
 }
 
 #header nav {
@@ -3459,4 +3458,8 @@ body.is-menu-visible #menu .close {
     padding: 0 1.25em;
   }
 
+}
+
+.text-content {
+  margin-bottom: 3em;
 }
