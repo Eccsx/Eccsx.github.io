@@ -278,6 +278,10 @@ h1 {
   letter-spacing: -0.035em;
 }
 
+.sep {
+  margin-top: 2em;
+}
+
 h1 a {
   color: inherit;
 }
@@ -287,6 +291,10 @@ h1 a {
   h1 {
     font-size: 2em;
     margin: 0 0 1em 0;
+  }
+
+  .sep {
+    margin-top: 2em;
   }
 
 }
