@@ -1,5 +1,4 @@
-new TypeIt("#test", {
-  strings: ["This is a great string.", "But here is a better one."],
-  speed: 50,
-  waitUntilVisible: true
+new TypeIt("#home-title", {
+  speed: 10,
+  cursorChar: "_"
 }).go();
