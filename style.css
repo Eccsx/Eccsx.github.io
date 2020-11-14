@@ -4,13 +4,13 @@
   cursor:none;
 }
 
-html, body {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  font: 1rem Inconsolata, monospace;
+html {
+  background-color: black;
+  padding: 25px;
 }
 
 body {
+  border: 2px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,6 +19,8 @@ body {
 
 #home-wrapper {
   margin: auto;
+  color: white;
+  font: 1rem Inconsolata, monospace;
 }
 
 #home-subtitle {
