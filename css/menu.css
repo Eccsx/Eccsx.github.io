@@ -29,6 +29,7 @@ body {
 }
 
 #menu-subtitle {
+  width: 300px;
   margin-top: 50px;
   font: 1rem Inconsolata, monospace;
 }
