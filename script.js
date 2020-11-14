@@ -3,6 +3,7 @@
 const title = new TypeIt("#home-title", {
   speed: 1,
   cursorChar: "",
+  lifeLike: false,
   // Removing cursor after finishing writing
   afterComplete: function (step, instance) {
     instance.destroy();
