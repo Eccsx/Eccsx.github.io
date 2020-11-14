@@ -1,5 +1,4 @@
 // Typing animations
-
 const title = new TypeIt("#home-title", {
   speed: 1,
   cursorChar: "",
