@@ -22,7 +22,7 @@ function saveConsoleInput(input) {
   const console = document.getElementById('console');
   const last = document.createElement('div');
   last.className = "old-input";
-  last.innerHTML = input;
+  last.innerHTML = "?:\\Thomas_Mattone> " + input;
   console.insertBefore(last, console.children[oldInputCount]);
   oldInputCount ++;
 }

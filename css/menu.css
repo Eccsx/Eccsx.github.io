@@ -62,8 +62,6 @@ body {
 #console-input {
   border: none;
   border-radius: O;
-  margin-top: 3px;
-  margin-left: 15px;
   font: 1.3rem Inconsolata, monospace;
   color: white;
   background-color: black;
@@ -76,4 +74,10 @@ body {
 .old-input {
   margin-top: 3px;
   margin-left: 15px;
+}
+
+label[for="console-input"] {
+  margin-left: 15px;
+  margin-top: 3px;
+  padding: 0;
 }
