@@ -18,18 +18,26 @@ body {
 
 #menu-wrapper {
   margin: auto;
-  margin-left: 235.375px;
   color: white;
   font: 1.3rem Inconsolata, monospace;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
 }
 
-#menu > li {
-  list-style-type: none;
-  margin-bottom: 20px;
+#finder {
+  border: 2px solid white;
+  width: 25%;
+  height: 100% - 20px;
+  margin: 10px;
+  margin-right: 5px;
 }
 
-#menu-subtitle {
-  width: 300px;
-  margin-top: 50px;
-  font: 1rem Inconsolata, monospace;
+#console {
+  border: 2px solid white;
+  width: 100%;
+  height: 100% - 20px;
+  margin: 10px;
+  margin-left: 5px;
 }
