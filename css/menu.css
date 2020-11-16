@@ -55,6 +55,8 @@ body {
   width: 100%;
   height: 100%;
   margin-left: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 #console-input {
@@ -69,4 +71,9 @@ body {
 
 #console-input:focus {
   outline: none;
+}
+
+.old-input {
+  margin-top: 3px;
+  margin-left: 15px;
 }
