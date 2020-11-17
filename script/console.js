@@ -1,13 +1,15 @@
 // Variable
+
 let consoleLineCount = 0;
-const console = document.getElementById('console');
+const consoleElement = document.getElementById('console');
 let isResponse = false;
+let input;
 // Key listener
+
 document.addEventListener('keyup', (e) => {
   if (e.code == "Enter") {
-    const input = getConsoleInput();
-    if (input == "why") {
-      whyCmd();
+    if ((input = getConsoleInput()) in cmdList) {
+      cmdList["" + input]();
     }
     saveConsoleInput(input, isResponse);
     nextConsoleInput();
@@ -27,16 +29,31 @@ function saveConsoleInput(input) {
   const last = document.createElement('div');
   last.className = "old-input";
   last.innerHTML = "?:\\Thomas_Mattone> " + input;
-  console.insertBefore(last, console.children[consoleLineCount]);
+  consoleElement.insertBefore(last, consoleElement.children[consoleLineCount]);
   consoleLineCount += (isResponse ? 2 : 1);
 }
 
 // Commands
 
-function whyCmd() {
+const cmdList = {
+  "why": () => { why();},
+  "clear": () => { clear();}
+}
+
+function why() {
+  createResponse("because.");
+}
+
+function clear() {
+  $('.old-input').remove();
+  $('.resp-input').remove();
+  consoleLineCount = 0;
+}
+
+function createResponse(msg) {
   isResponse = true;
-  const rep = document.createElement('div');
-  rep.className = "resp-input";
-  rep.innerHTML = "because.";
-  console.insertBefore(rep, console.children[consoleLineCount]);
+  const resp = document.createElement('div');
+  resp.className = "resp-input";
+  resp.innerHTML = msg;
+  consoleElement.insertBefore(resp, consoleElement.children[consoleLineCount]);
 }
