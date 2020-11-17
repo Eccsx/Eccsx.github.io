@@ -72,12 +72,15 @@ body {
 }
 
 .old-input {
-  margin-top: 3px;
   margin-left: 15px;
 }
 
 label[for="console-input"] {
   margin-left: 15px;
-  margin-top: 3px;
   padding: 0;
+}
+
+.resp-input {
+  margin-left: 15px;
+  margin-bottom: 20px;
 }
