@@ -11,6 +11,9 @@ document.addEventListener('keyup', (e) => {
     if ((input = getConsoleInput()) in cmdList) {
       cmdList["" + input]();
     }
+    else {
+      error();
+    }
     saveConsoleInput(input, isResponse);
     nextConsoleInput();
   }
@@ -37,7 +40,7 @@ function saveConsoleInput(input) {
 
 const cmdList = {
   "why": () => { why();},
-  "clear": () => { clear();}
+  "clear": () => { clear();},
 }
 
 function why() {
@@ -48,6 +51,10 @@ function clear() {
   $('.old-input').remove();
   $('.resp-input').remove();
   consoleLineCount = 0;
+}
+
+function error() {
+  createResponse("Command not recognized by the system.");
 }
 
 function createResponse(msg) {
