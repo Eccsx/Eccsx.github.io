@@ -4,6 +4,7 @@ let consoleLineCount = 0;
 const consoleElement = document.getElementById('console');
 let isResponse = false;
 let input;
+
 // Key listener
 
 document.addEventListener('keyup', (e) => {
@@ -90,3 +91,12 @@ const FOLDER = [
   "Skills",
   "Requests"
 ];
+
+function generateRandomSecretFileName() {
+  const secretFiles = $('.file.restricted');
+  secretFiles.each(function () {
+    s1 = Math.random().toString(36).substring(2, 10);
+    s2 = Math.random().toString(36).substring(2, 10);
+    this.innerHTML = s1 + s2 + ".lck";
+  });
+}
