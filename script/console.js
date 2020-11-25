@@ -8,8 +8,12 @@ let input;
 
 document.addEventListener('keyup', (e) => {
   if (e.code == "Enter") {
-    if ((input = getConsoleInput()) in cmdList) {
-      cmdList["" + input]();
+    if ((input = getConsoleInput()) in CMD) {
+      CMD["" + input]();
+    }
+    else if (FOLDER.includes(input)) {
+      closeOpenFolder();
+      revealFilesOf(input);
     }
     else {
       error();
@@ -38,9 +42,9 @@ function saveConsoleInput(input) {
 
 // Commands
 
-const cmdList = {
+const CMD = {
   "why": () => { why();},
-  "clear": () => { clear();},
+  "clear": () => { clear();}
 }
 
 function why() {
@@ -57,6 +61,18 @@ function error() {
   createResponse("Command not recognized by the system.");
 }
 
+function revealFilesOf(folderName) {
+  const files = $('#' + folderName + ' .file.hidden');
+  files.removeClass('hidden');
+  files.addClass('revealed')
+}
+
+function closeOpenFolder() {
+  const files = $('.file.revealed');
+  files.removeClass('revealed');
+  files.addClass('hidden');
+}
+
 function createResponse(msg) {
   isResponse = true;
   const resp = document.createElement('div');
@@ -64,3 +80,13 @@ function createResponse(msg) {
   resp.innerHTML = msg;
   consoleElement.insertBefore(resp, consoleElement.children[consoleLineCount]);
 }
+
+// Folders and Files
+
+const FOLDER = [
+  "Identity",
+  "Accomplishments",
+  "Missions_History",
+  "Skills",
+  "Requests"
+];
